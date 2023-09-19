@@ -1,0 +1,1 @@
+D:\2DS_THIAGO\PROGRAMAÇÃO DE APLICATIVOS MOBILE 1\DiceRoller\DiceRoller-main\DiceRoller\DiceRoller.csproj;x64

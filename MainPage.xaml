@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="DiceRoller.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="25"
+            Padding="30,0"
+            Margin="50" >
+
+            <Image
+                x:Name="diceImage"
+                Source="dice_d4.png"
+                SemanticProperties.Description="A dice with the number 1 facing up"
+                HeightRequest="200"
+                HorizontalOptions="Center" />
+
+            <Label Text="ROLADOR DE DADOS" FontSize="30" HorizontalOptions="Center" Margin="0, 0, 0, 80" VerticalTextAlignment="Center"/>
+            <Label x:Name="numberOutput" Text="0" FontSize="80" HorizontalOptions="Center" SelectedIndexChanges ="OnChangedOption"/>
+
+
+            <Picker x:Name="SeletorDosLados" HorizontalOptions="Center"
+            Title="Quantidade de lados:" FontSize="16">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:Int32}">
+                        <x:Int32>4</x:Int32>
+                        <x:Int32>6</x:Int32>
+                        <x:Int32>10</x:Int32>
+                        <x:Int32>20</x:Int32>
+                        <x:Int32>100</x:Int32>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
+
+            <Button Text="ROLAR O DADO" BackgroundColor="Grey" Margin="30"
+                VerticalOptions="Center"
+                HorizontalOptions="Center"
+                Clicked="OnButtonClicked" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
